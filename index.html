@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learning App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🌍 Language Learning App</h1>
+
+        <div class="category">
+            <button onclick="showCategory('vocabulary')">Vocabulary</button>
+            <button onclick="showCategory('grammar')">Grammar</button>
+            <button onclick="startQuiz()">Quiz</button>
+        </div>
+
+        <div id="lesson-card" class="card">
+            <h2 id="word">Hello</h2>
+            <p><strong>Translation:</strong> <span id="translation">Vanakkam</span></p>
+            <p><strong>Pronunciation:</strong> <span id="pronunciation">heh-loh</span></p>
+            <button onclick="nextCard()">Next Flashcard</button>
+        </div>
+
+        <div id="quiz-section" class="quiz hidden">
+            <h2 id="question"></h2>
+            <input type="text" id="answer" placeholder="Type Answer">
+            <button onclick="checkAnswer()">Submit</button>
+            <p id="result"></p>
+            <p>Score: <span id="score">0</span></p>
+        </div>
+
+        <div class="progress-section">
+            <h3>📈 Learning Progress</h3>
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
